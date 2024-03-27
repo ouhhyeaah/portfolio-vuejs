@@ -19,7 +19,6 @@ onMounted(() => {
     JSONSocialsData.push(social)
   })
   socialsData.value = JSONSocialsData
-  console.log(socialsData.value)
 })
 
 </script>
@@ -41,8 +40,8 @@ onMounted(() => {
 export default {
   name:"SocialView",
   props: {
-    title: Boolean,
-    size: Number,
+    title: String,
+    size: String,
     justify_type:String,
   }
 }

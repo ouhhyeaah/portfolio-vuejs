@@ -9,7 +9,7 @@ import SocialView from "@/components/SocialView.vue";
   <div className="mt-5 laptop:mt-40 p-2 laptop:p-0">
     <div>
         <div className="mt-10">
-          <SocialView title=True justify_type="justify-center" />
+          <SocialView title=true justify_type="justify-center" />
         </div>
     </div>
   </div>
