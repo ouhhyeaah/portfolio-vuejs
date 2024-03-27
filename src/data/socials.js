@@ -2,7 +2,7 @@ const socials = [
   {
     "id": 1,
     "title": "Github",
-    "link": "https://https://github.com/ouhhyeaah",
+    "link": "https://github.com/ouhhyeaah",
     "icon": "github",
   },
   {
