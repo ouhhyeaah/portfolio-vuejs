@@ -20,7 +20,7 @@ const toggleDark = useToggle(isDark)
           ><a href="#education">Education</a></li>
           <li class="p-6 hover:shadow-xl rounded-xl transition duration-300 ease-in-out hover:scale-105 hover:text-brown-color"
               :class="isDark ? 'dark-neumorphism' : 'neumorphism'"
-          >Experience</li>
+          ><a href="#skills">Skills </a> </li>
           <li class="p-6 hover:shadow-xl rounded-xl transition duration-300 ease-in-out hover:scale-105 hover:text-brown-color"
               :class="isDark ? 'dark-neumorphism' : 'neumorphism'"
           >Projects</li>

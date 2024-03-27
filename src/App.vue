@@ -2,6 +2,7 @@
 import { useDark } from "@vueuse/core";
 const isDark = useDark()
 import {onMounted} from "vue";
+import SkillsComponent from "@/components/SkillsComponent.vue";
 
 onMounted(() => {
   const cursor = document.querySelector('.customcc');
@@ -27,6 +28,8 @@ onMounted(() => {
     <NavBar/>
     <Hero/>
     <EducationView/>
+
+    <SkillsComponent/>
     <FooterView/>
   </div>
 </template>
