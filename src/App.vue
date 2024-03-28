@@ -22,7 +22,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div class="dark:bg-dark-mode h-full pb-32 dark:text-white"  >
+  <div class="dark:bg-dark-mode h-full pb-32 dark:text-white overflow-hidden" >
     <div class="gradient-circle"></div>
     <div class="customcc" :class="isDark ? 'customcc-dark-theme' : 'customcc' "></div>
     <NavBar/>

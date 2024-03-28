@@ -1,28 +1,15 @@
 <script setup>
-import {ref, onMounted} from "vue";
+import {ref} from "vue";
 import { useDark } from "@vueuse/core";
 const isDark = useDark()
 import skills from "@/data/skills";
 import ProgressBarComponent from "@/components/ProgressBarComponent.vue";
-
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faLinux, faAws, faMicrosoft, faDocker, faJs, faPython } from "@fortawesome/free-brands-svg-icons";
+library.add(faLinux, faAws,faMicrosoft, faDocker, faJs, faPython)
 
 const ref_skills = ref(skills);
-
-onMounted(() => {
-  console.log("SkillsComponent mounted");
-  function progressBar() {
-    const bars = document.querySelectorAll('.bar');
-    bars.forEach(bar => {
-      const percentage = bar.style.width;
-      bar.style.width = '0%';
-      setTimeout(() => {
-        bar.style.transition = 'width 1s';
-        bar.style.width = percentage;
-      }, 1000);
-    });
-  }
-  progressBar();
-});
 
 </script>
 
@@ -30,14 +17,21 @@ onMounted(() => {
 
 
   <section id="skills" class="pt-20">
-    <div class="w-full h-auto flex flex-wrap mx-auto">
-      <div class="w-1/2 text-center" v-for="skill in ref_skills"
-      :key="skill.id">
-        <div class="p-10 m-5" :class="isDark ? 'dark-neumorphism' : 'neumorphism' ">
-          <span class="text-2xl mont-bold">{{skill.name}}</span>
-          <ProgressBarComponent :percentage="skill.percentage" />
+    <div class="w-full h-auto flex flex-wrap justify-center">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+        <div  v-for="skill in ref_skills" :key="skill.id" class="lg:p-6 md:p-4">
+          <div class="p-10 m-5 w-full col-span-2 hover:grid-flow-row" :class="isDark ? 'dark-neumorphism' : 'neumorphism' ">
+            <span class="text-2xl mont-bold flex justify-between pb-5">
+              {{skill.name}}
+               <FontAwesomeIcon :icon="['fab', skill.icon ]" size="lg"/>
+                <img src="../assets/ansible.svg" style="height: 30px" v-if="skill.icon === 'ansible' " alt="ansible">
+                <img src="../assets/adobe.svg" style="height: 30px" v-if="skill.icon === 'adobe' " alt="aws">
+            </span>
+            <ProgressBarComponent :percentage="skill.percentage" />
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
