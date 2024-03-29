@@ -22,13 +22,11 @@ onMounted(() => {
 })
 
 </script>
-
 <template>
-
   <div class="flex flex-wrap mob:flex-nowrap link gap-10 w-full" :class="justify_type">
     <div v-for="social in socialsData" :key="social.id" class="flex flex-col">
         <a :href="social.link" class="flex flex-col justify-center align-middle">
-          <FontAwesomeIcon :icon="['fab', social.icon ]" :class="'size-'+size"/>
+          <FontAwesomeIcon :icon="['fab', social.icon ]" :class="'size-'+size" class="icon__ hover:scale-125 transition-all duration-[444ms] "/>
           <span :style=" title ? '' : 'display: none'" class="mx-auto"> {{social.title}}</span>
         </a>
     </div>

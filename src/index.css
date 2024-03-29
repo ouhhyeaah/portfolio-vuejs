@@ -1,4 +1,4 @@
-/* ./src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /* ./src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,26 +21,48 @@
     src: url("./fonts/mont/Mont-Bold.otf");
 }
 .mont{
-    font-family: mont;
+    font-family: mont, serif;
 }
 .mont-light{
     font-family: mont-light, serif;
 }
 
 .silk-flower{
-    font-family: silk-flower;
+    font-family: silk-flower, serif;
 }
 .mont-bold {
-    font-family: mont-bold;
+    font-family: mont-bold, serif;
 }
+.montserrat {
+     font-family: "Montserrat", serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+     color: var(--dark-blue);
+ }
+
+:root{
+    --dark-gray:#16171d;
+    --dark-blue: #10182a;
+    --color-cursor: #ffffff;
+    --cursor-outline-shade: 0.3;
+    --cursor-size: 10px;
+    --cursor-outline-size: 12px;
+}
+body{
+    overflow: hidden; /* Hide scrollbars */
+}
+
 
 /* Effet de lumière */
 .gradient-circle {
-    position: absolute;
+    overflow: hidden;
+    position: relative;
     pointer-events: none;
     z-index: 100;
-    top: -30px;
-    height: 60px;
+    top: -50px;
+    left: 20%;
+    height: 80px;
     width: 100vw;
     opacity: 0.5;
     filter: blur(40px);
@@ -105,11 +127,15 @@
     }
     33% {
         transform: scale(2);
-        translate: 200px;
+        translate: 20vw;
+    }
+    50% {
+        transform: scale(1);
+        translate: 0px;
     }
     66% {
         transform: scale(2);
-        translate: -200px;
+        translate: -20vw;
     }
     100% {
         transform: scale(1);
@@ -117,3 +143,49 @@
     }
 
 }
+
+html {
+    cursor: none;
+    background: #e0e0e1;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.customcc{
+    width: 15px;
+    height: 15px;
+    background: var(--dark-blue);
+    border-radius: 50%;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 9999; /* assure que le curseur soit au dessus de tout le reste */
+    pointer-events: none; /* assure que le curseur n'interfère pas avec les éléments de la page */
+}
+.customcc-dark-theme{
+    width: 15px;
+    height: 15px;
+    background: var(--color-cursor);
+    border-radius: 50%;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 9999; /* assure que le curseur soit au dessus de tout le reste */
+    pointer-events: none; /* assure que le curseur n'interfère pas avec les éléments de la page */
+}
+a {
+    text-decoration: none;
+    cursor: none;
+}
+.neumorphism {
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+.dark-neumorphism {
+    border-radius: 50px;
+    background: #16171c;
+    box-shadow:  29px 29px 058px #09090b,
+    -29px -29px 58px #23252d;
+}
+
+
+

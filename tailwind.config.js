@@ -8,7 +8,12 @@ module.exports = {
       colors: {
         'dark-mode': '#16181c',
         'brown-color': '#743308' ,
-      }
+        'light-brown-color': '#a45f2e',
+        'radial-gradient': 'radial-gradient(circle, rgba(248, 107, 223, 1) 0%, rgba(107, 107, 248, 0.8) 100%);',
+      },
+     backgroundImage:{
+        'radial-gradient': 'radial-gradient(circle, rgba(248, 107, 223, 1) 0%, rgba(107, 107, 248, 0.8) 100%);',
+     }
     },
   },
   plugins: [],

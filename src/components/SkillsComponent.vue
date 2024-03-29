@@ -14,28 +14,23 @@ const ref_skills = ref(skills);
 </script>
 
 <template>
-
-
   <section id="skills" class="pt-20">
     <div class="w-full h-auto flex flex-wrap justify-center">
       <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
-        <div  v-for="skill in ref_skills" :key="skill.id" class="lg:p-6 md:p-4">
-          <div class="p-10 m-5 w-full col-span-2 hover:grid-flow-row" :class="isDark ? 'dark-neumorphism' : 'neumorphism' ">
-            <span class="text-2xl mont-bold flex justify-between pb-5">
+        <div  v-for="skill in ref_skills" :key="skill.id" class="flex justify-center">
+          <div class="p-10 m-5 w-full col-span-2" :class="isDark ? 'dark-neumorphism' : 'neumorphism' " >
+            <span class="text-2xl mont-bold flex justify-between gap-8 pb-5">
               {{skill.name}}
-               <FontAwesomeIcon :icon="['fab', skill.icon ]" size="lg"/>
-                <img src="../assets/ansible.svg" style="height: 30px" v-if="skill.icon === 'ansible' " alt="ansible">
-                <img src="../assets/adobe.svg" style="height: 30px" v-if="skill.icon === 'adobe' " alt="aws">
+               <FontAwesomeIcon v-if="skill.icon !== 'ansible' && skill.icon !== 'adobe' " :icon="['fab', skill.icon ]" size="lg"/>
+                <img src="../assets/icons/ansible.svg" style="height: 30px" v-if="skill.icon === 'ansible' " alt="ansibleIcon">
+                <img src="../assets/icons/adobe.svg" style="height: 30px" v-if="skill.icon === 'adobe' " alt="adobeIcon" :class="isDark ? 'bg-white' : '' ">
             </span>
-            <ProgressBarComponent :percentage="skill.percentage" />
+            <ProgressBarComponent :id="skill.id" :percentage="skill.percentage" />
           </div>
         </div>
       </div>
-
     </div>
   </section>
-
-
 </template>
 
 <script>
