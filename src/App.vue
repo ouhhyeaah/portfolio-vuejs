@@ -3,7 +3,7 @@
     <div class="gradient-circle overflow-x-hidden"></div>
     <div class="customcc" :class="isDark ? 'customcc-dark-theme' : 'customcc' "></div>
     <NavBar/>
-    <Hero :isDark="isDark"/>
+    <Hero :isDark="isDark" />
     <EducationView :isDark="isDark"/>
     <SkillsComponent/>
     <FooterView/>
@@ -50,7 +50,12 @@ export default {
         moveCursor(e);
       });
     });
-  }
+  },
+  methods: {
+    isMobile() {
+      return window.innerWidth < 768;
+    }
+  },
 }
 
 </script>

@@ -65,27 +65,22 @@ export default {
       index: 0,
       image: null,
       images: [{
-        id: 1,
+        id: 0,
         src: images.me_1,
         alt: "me"
       },
         {
-          id: 2,
+          id: 1,
           src: images.me_2,
           alt: "me"
         },
         {
-          id: 3,
-          src: images.me_3,
-          alt: "me"
-        },
-        {
-          id: 4,
+          id: 2,
           src: images.me_3_bw,
           alt: "me"
         },
         {
-          id: 5,
+          id: 3,
           src: images.me_4,
           alt: "me"
         }
@@ -93,7 +88,7 @@ export default {
     }
   },
   mounted() {
-    //this.image = this.images[Math.min(Math.random()*this.images.length | 0)]; Pour faire random la première image
+    //this.image = this.images[Math.min(Math.random()*(this.images.length) )]; //Pour faire random la première image
     this.image = this.images[this.index];
     this.switchImage();
   },
