@@ -19,7 +19,7 @@
 <script>
 import {ref} from 'vue'
 import educations from "@/data/educations";
-const ref_educations = ref(educations)
+const ref_educations = ref(educations.reverse())
 export default {
   props: {
     isDark: Boolean
