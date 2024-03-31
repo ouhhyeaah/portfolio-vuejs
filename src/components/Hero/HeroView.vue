@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import SocialView from "@/components/SocialView.vue";
-import DisplayImage from "@/components/DisplayImage.vue";
+import SocialView from "@/components/add-on/SocialView.vue";
+import DisplayImage from "@/components/Hero/DisplayImage.vue";
 export default {
   components: {
     DisplayImage,

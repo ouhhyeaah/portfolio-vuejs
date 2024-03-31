@@ -17,12 +17,12 @@ import {useDark} from "@vueuse/core";
 const isDark = useDark()
 
 //TODO Add a div with gradient-circle-bottom class to the last element of the page
-import SkillsComponent from "@/components/SkillsComponent.vue";
-import NavBar from "./components/NavBar.vue";
-import Hero from "@/components/HeroView.vue";
-import EducationView from "@/components/EducationView.vue";
-import FooterView from "@/components/FooterView.vue";
-import ScrollToTheTopButton from "@/components/ScrollToTheTopButton.vue";
+import SkillsComponent from "@/components/Skills/SkillsComponent.vue";
+import NavBar from "./components/Navbar/NavBar.vue";
+import Hero from "@/components/Hero/HeroView.vue";
+import EducationView from "@/components/Education/EducationView.vue";
+import FooterView from "@/components/Footer/FooterView.vue";
+import ScrollToTheTopButton from "@/components/add-on/ScrollToTheTopButton.vue";
 export default {
   name: 'App',
   components: {

@@ -33,7 +33,7 @@ const displayMenu = () => {
 <template>
   <div class="navbar z-10 p-4 flex align-middle gap-8" :class="isDark ? 'bg-dark-mode' : ' bg-white' ">
     <div class="logo text-2xl">
-      <a href="" class="text-gradient">
+      <a href="" class="text-gradient silk-flower">
         Louis.
       </a>
     </div>
@@ -49,7 +49,7 @@ const displayMenu = () => {
 
     <ul class="menu z-10" :class="isDark ? 'bg-dark-mode' : ' bg-white' ">
       <li v-for="navbar_item in navbarItems" :key="navbar_item.id" class="z-10 ml-5">
-        <a :href="navbar_item.link" class="w-full" >
+        <a :href="navbar_item.link" class="w-full silk-flower" >
           {{navbar_item.name}}
         </a>
       </li>
@@ -59,7 +59,7 @@ const displayMenu = () => {
 </template>
 
 <script>
-import ThemeToggle from "@/components/ThemeToggle.vue";
+import ThemeToggle from "@/components/add-on/ThemeToggle.vue";
 
 export default {
   components: {ThemeToggle},

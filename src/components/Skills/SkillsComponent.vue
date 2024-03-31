@@ -3,7 +3,7 @@ import {ref} from "vue";
 import { useDark } from "@vueuse/core";
 const isDark = useDark()
 import skills from "@/data/skills";
-import ProgressBarComponent from "@/components/ProgressBarComponent.vue";
+import ProgressBarComponent from "@/components/Skills/ProgressBarComponent.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {faLinux, faAws, faMicrosoft, faDocker, faJs, faPython } from "@fortawesome/free-brands-svg-icons";
@@ -22,8 +22,8 @@ const ref_skills = ref(skills);
             <span class="text-2xl mont-bold flex justify-between gap-8 pb-5">
               {{skill.name}}
                <FontAwesomeIcon v-if="skill.icon !== 'ansible' && skill.icon !== 'adobe' " :icon="['fab', skill.icon ]" size="lg"/>
-                <img src="../assets/icons/ansible.svg" style="height: 30px" v-if="skill.icon === 'ansible' " alt="ansibleIcon">
-                <img src="../assets/icons/adobe.svg" style="height: 30px" v-if="skill.icon === 'adobe' " alt="adobeIcon" :class="isDark ? 'bg-white' : '' ">
+                <img src="../../assets/icons/ansible.svg" style="height: 30px" v-if="skill.icon === 'ansible' " alt="ansibleIcon">
+                <img src="../../assets/icons/adobe.svg" style="height: 30px" v-if="skill.icon === 'adobe' " alt="adobeIcon" :class="isDark ? 'bg-white' : '' ">
             </span>
             <ProgressBarComponent :id="skill.id" :percentage="skill.percentage" />
           </div>
