@@ -13,7 +13,7 @@ const toggleAnimation = () => {
     toggleButton.style.translate = "0% 0%"
   }
 }
-import ThemeToggle from "@/components/add-on/ThemeToggle.vue";
+import ThemeToggle from "@/components/add-on/ThemeToggleComponent.vue";
 </script>
 
 <template>

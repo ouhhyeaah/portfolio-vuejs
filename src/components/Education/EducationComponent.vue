@@ -5,9 +5,9 @@
            :class="isDark ? 'dark-neumorphism' : 'neumorphism'"
              v-for="education in ref_educations " :key="education.id"
       >
-        <h1 class="text-5xl py-8 mont-bold"> {{ education.school }} </h1>
+        <h1 class="text-4xl sm:text-5xl py-8 mont-bold"> {{ education.school }} </h1>
         <span class="text-2xl mont-light ">{{ education.start }} / {{ education.start + education.duration}}</span>
-        <p class="py-8 mont text-2xl">
+        <p class="py-8 mont text-xl sm:text-2xl">
           {{education.description}}
         </p>
       </div>

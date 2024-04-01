@@ -59,7 +59,7 @@ const displayMenu = () => {
 </template>
 
 <script>
-import ThemeToggle from "@/components/add-on/ThemeToggle.vue";
+import ThemeToggle from "@/components/add-on/ThemeToggleComponent.vue";
 
 export default {
   components: {ThemeToggle},

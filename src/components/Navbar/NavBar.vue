@@ -19,8 +19,8 @@ const navbar_items = [
   {id: 3, name: 'Projects', link: '#projects'},
   {id: 4, name: 'Contact', link: '#contact'}
 ]
-import MobileNavbar from "@/components/Navbar/MobileNavbar.vue";
-import DesktopNavbar from "@/components/Navbar/DesktopNavbar.vue";
+import MobileNavbar from "@/components/Navbar/MobileNavbarComponent.vue";
+import DesktopNavbar from "@/components/Navbar/DesktopNavbarComponent.vue";
 
 export default {
   name: "NavBar",

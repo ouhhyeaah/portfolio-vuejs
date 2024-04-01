@@ -5,8 +5,9 @@
 
     <NavBar/>
     <Hero :isDark="isDark" />
-    <EducationView :isDark="isDark"/>
+    <EducationView class="px-8" :isDark="isDark"/>
     <SkillsComponent/>
+    <ProjectsComponent :isDark="isDark"/>
     <FooterView/>
     <ScrollToTheTopButton/>
   </div>
@@ -19,9 +20,10 @@ const isDark = useDark()
 //TODO Add a div with gradient-circle-bottom class to the last element of the page
 import SkillsComponent from "@/components/Skills/SkillsComponent.vue";
 import NavBar from "./components/Navbar/NavBar.vue";
-import Hero from "@/components/Hero/HeroView.vue";
-import EducationView from "@/components/Education/EducationView.vue";
-import FooterView from "@/components/Footer/FooterView.vue";
+import Hero from "@/components/Hero/HeroComponent.vue";
+import EducationView from "@/components/Education/EducationComponent.vue";
+import FooterView from "@/components/Footer/FooterComponent.vue";
+import ProjectsComponent from "@/components/Projects/ProjectsComponent.vue";
 import ScrollToTheTopButton from "@/components/add-on/ScrollToTheTopButton.vue";
 export default {
   name: 'App',
@@ -30,6 +32,7 @@ export default {
     EducationView,
     NavBar,
     Hero,
+    ProjectsComponent,
     FooterView,
     ScrollToTheTopButton
   },

@@ -2,7 +2,7 @@
 // import { useDark, useToggle } from "@vueuse/core";
 // const isDark = useDark()
 // const toggleDark = useToggle(isDark)
-import SocialView from "@/components/add-on/SocialView.vue";
+import SocialView from "@/components/add-on/SocialComponent.vue";
 </script>
 
 <template>
