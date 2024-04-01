@@ -27,7 +27,6 @@ const displayMenu = () => {
     }
   });
 }
-
 </script>
 
 <template>
@@ -74,17 +73,9 @@ export default {
 
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 *, *:before, *:after {
   box-sizing: border-box;
 }
-body {
-  font-family: "Inconsolata", sans-serif;
-  font-size: 14px;
-  padding: 0 0 40px 0;
-  margin: 0;
-}
-
 .navbar {
   border-radius: 4px;
   position: absolute;

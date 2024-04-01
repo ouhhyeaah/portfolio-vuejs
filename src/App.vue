@@ -15,7 +15,7 @@
 
 <script>
 import {useDark} from "@vueuse/core";
-const isDark = useDark()
+const isDark =  useDark()
 
 //TODO Add a div with gradient-circle-bottom class to the last element of the page
 import SkillsComponent from "@/components/Skills/SkillsComponent.vue";

@@ -19,8 +19,10 @@
           <template v-slot:body>
             {{ project.description }}
             <br><br>
-            <span class="hover:text-pink-200 transition-all duration-300">
+            <span class="hover:text-pink-200 transition-all duration-300 font-bold">
               Date :  {{ new Date(project.date).toLocaleDateString() }} <br>
+            </span>
+            <span class="mont-light italic mt-2">
               {{ ( new Date().getFullYear() - new Date(project.date).getFullYear()) * 12 + new Date().getMonth() - new Date(project.date).getMonth()}} months ago
             </span>
             <br> <br>
