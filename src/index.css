@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /* ./src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); /* ./src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,39 +20,38 @@
     font-family: "mont-bold";
     src: url("./fonts/mont/Mont-Bold.otf");
 }
-.mont{
+.mont {
     font-family: mont, serif;
 }
-.mont-light{
+.mont-light {
     font-family: mont-light, serif;
 }
 
-.silk-flower{
+.silk-flower {
     font-family: silk-flower, serif;
 }
 .mont-bold {
     font-family: mont-bold, serif;
 }
 .montserrat {
-     font-family: "Montserrat", serif;
-     font-optical-sizing: auto;
-     font-weight: 400;
-     font-style: normal;
-     color: var(--dark-blue);
- }
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--dark-blue);
+}
 
-:root{
-    --dark-gray:#16171d;
+:root {
+    --dark-gray: #16171d;
     --dark-blue: #10182a;
     --color-cursor: #ffffff;
     --cursor-outline-shade: 0.3;
     --cursor-size: 10px;
     --cursor-outline-size: 12px;
 }
-body{
+body {
     overflow: hidden; /* Hide scrollbars */
 }
-
 
 /* Effet de lumière */
 .gradient-circle {
@@ -67,26 +66,27 @@ body{
     opacity: 0.5;
     filter: blur(40px);
     background: radial-gradient(
-            circle,
-            rgba(248, 107, 223, 1) 0%,
-            rgba(107, 107, 248, 0.8) 100%
+        circle,
+        rgba(248, 107, 223, 1) 0%,
+        rgba(107, 107, 248, 0.8) 100%
     );
     animation: pulse 20s infinite;
 }
 .gradient-circle-bottom {
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     z-index: 100;
-    bottom: -20px;
-    height: 30px;
+    bottom: 0;
+    height: 40px;
     width: 100vw;
     opacity: 0.5;
     filter: blur(40px);
     background: radial-gradient(
-            circle,
-            rgba(248, 107, 223, 1) 0%,
-            rgba(107, 107, 248, 0.8) 100%
+        circle,
+        rgba(248, 107, 223, 1) 0%,
+        rgba(107, 107, 248, 0.8) 100%
     );
+    animation: pulse 20s infinite;
 }
 
 .gradient-shadow:hover::before {
@@ -141,7 +141,6 @@ body{
         transform: scale(1);
         translate: 0px;
     }
-
 }
 
 html {
@@ -150,7 +149,7 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-.customcc{
+.customcc {
     width: 15px;
     height: 15px;
     background: var(--dark-blue);
@@ -160,7 +159,7 @@ html {
     z-index: 9999; /* assure que le curseur soit au dessus de tout le reste */
     pointer-events: none; /* assure que le curseur n'interfère pas avec les éléments de la page */
 }
-.customcc-dark-theme{
+.customcc-dark-theme {
     width: 15px;
     height: 15px;
     background: var(--color-cursor);
@@ -175,19 +174,21 @@ a {
     cursor: none;
 }
 .neumorphism {
-    border-radius: 50px;
+    border-radius: 20px;
     background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,
-    -20px -20px 60px #ffffff;
+    box-shadow:
+        20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
 }
 .dark-neumorphism {
     border-radius: 50px;
     background: #16171c;
-    box-shadow:  29px 29px 058px #09090b,
-    -29px -29px 58px #23252d;
+    box-shadow:
+        29px 29px 058px #09090b,
+        -29px -29px 58px #23252d;
 }
 
-.text-gradient{
+.text-gradient {
     /* Fallback: Set a background color. */
     background-color: red;
     /* Create the gradient. */
