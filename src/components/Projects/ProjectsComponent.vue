@@ -1,5 +1,5 @@
 <template>
-    <section id="projects" class="mont mt-20 mx-8 p-4">
+    <section id="projects" class="mont mt-20 mx-8 p-4 lg:mx-60">
         <h1 class="mont-bold text-4xl">Projects :</h1>
         <div v-for="project in ref_projects" :key="project.id" class="my-8">
             <div

@@ -2,7 +2,7 @@
   <img v-if="image"
        :key="image.id"
        @load="switchImage"
-       class="h-1/2 w-1/3 rounded-full transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+       class="h-1/2 w-1/3 rounded-full transition duration-200 ease-in-out hover:scale-105 hover:shadow-xl"
        :src="image.src"
        alt="image.alt"
   >
@@ -88,7 +88,6 @@ export default {
     }
   },
   mounted() {
-    //this.image = this.images[Math.min(Math.random()*(this.images.length) )]; //Pour faire random la première image
     this.image = this.images[this.index];
     this.switchImage();
   },
@@ -97,7 +96,7 @@ export default {
       setTimeout(() => {
         this.image = this.images[this.index];
         this.index = (this.index + 1) % this.images.length;
-      }, 7000);
+      }, 3000);
     }
   }
 }

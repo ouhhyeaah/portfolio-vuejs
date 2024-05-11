@@ -5,9 +5,11 @@ const toggleDark = useToggle(isDark);
 const toggleAnimation = () => {
   const isDark = document.getElementsByClassName("dark")
   const toggleButton = document.getElementById('toggleBtn')
+
   if (isDark.length !== 0){
     toggleButton.style.transition = "translate .7s"
     toggleButton.style.translate = "150% 0%"
+
   }else{
     toggleButton.style.transition = "translate .7s"
     toggleButton.style.translate = "0% 0%"
@@ -30,14 +32,14 @@ const displayMenu = () => {
 </script>
 
 <template>
-  <div class="navbar z-10 p-4 flex align-middle gap-8" :class="isDark ? 'bg-dark-mode' : ' bg-white' ">
+  <div class="navbar z-10 p-4 flex align-middle gap-8 " :class="isDark ? 'bg-dark-mode' : ' bg-white' ">
     <div class="logo text-2xl">
       <a href="" class="text-gradient silk-flower">
         Louis.
       </a>
     </div>
     <ul @click="toggleAnimation()" class="z-20">
-      <ThemeToggle @click="toggleDark()" id="toggleBtn" style="cursor: none" />
+      <ThemeToggle @click="toggleDark()" class="cursor-none" id="toggleBtn" />
     </ul>
     <button class="burger absolute right-12 top-5 z-50" @click="displayMenu"  type="button">
       <span :class="isDark ? 'dot-dark-mode' : 'dot-white-mode'"></span>
@@ -122,7 +124,7 @@ export default {
   margin: 0;
   overflow: hidden;
   max-height: 0;
-  transition: all 0.6s ease-in-out;;
+  transition: all 0.3s ease-in-out;;
 }
 .navbar ul.menu > li {
   display: block;

@@ -1,7 +1,8 @@
 <template>
     <div class="flex gap-6 justify-evenly dark:text-white py-12 lg:w-4/5 mx-6 my-8 lg:mx-auto" :class="isDark ? 'dark-neumorphism' : 'neumorphism'">
-      <div class="flex flex-col lg:p-10 px-8 w-full dark:text-white">
-        <span class="md:text-6xl text-3xl pb-7 dark:text-white mont-bold" >
+      <div class="flex flex-col lg:p-10 px-8 w-full dark:text-white max-w-[60%]">
+        <span class="md:text-6xl text-3xl pb-7 dark:text-white mont-bold"
+        >
           Hello 👋
         </span>
         <span class="dark:text-white lg:text-3xl md:text-xl text-xs mont-light text-wrap text-left">
