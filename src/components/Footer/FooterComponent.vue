@@ -11,8 +11,8 @@ library.add(faArrowUp);
     <section class="mt-5 laptop:mt-40 p-2 laptop:p-0 lg:mx-60">
         <div>
             <div class="mt-10 mx-auto">
-                <GetInTouchComponent class="mb-6" />
-                <SocialView title="true" justify_type="justify-center" />
+                <GetInTouchComponent class="mb-12" />
+                <SocialView title="true" class="lg:text-xl md:text-xl text-lg" justify_type="justify-center" />
                 <div class="mt-12 flex justify-center">
                   <div class="flex justify-center gap-2 mont-light capitalize">
                     <span>

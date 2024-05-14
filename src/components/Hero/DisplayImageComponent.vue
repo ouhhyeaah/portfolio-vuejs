@@ -96,7 +96,7 @@ export default {
       setTimeout(() => {
         this.image = this.images[this.index];
         this.index = (this.index + 1) % this.images.length;
-      }, 3000);
+      }, 7000);
     }
   }
 }

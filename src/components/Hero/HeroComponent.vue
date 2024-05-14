@@ -11,6 +11,9 @@
         <div class="pt-10 flex gap-10 justify-center">
           <SocialView justify_type="justify-around" class="lg:text-6xl md:text-5xl text-3xl" size=16 />
         </div>
+        <div class="flex justify-center">
+          <FileComponent/>
+        </div>
       </div>
       <DisplayImage class="my-auto mx-auto h-1/2 aspect-square mr-5" />
     </div>
@@ -19,13 +22,16 @@
 <script>
 import SocialView from "@/components/add-on/SocialComponent.vue";
 import DisplayImage from "@/components/Hero/DisplayImageComponent.vue";
+import FileComponent from "@/components/add-on/ResumeButton.vue";
 export default {
   components: {
+    FileComponent,
     DisplayImage,
-    SocialView
+    SocialView,
   },
   props: {
     isDark: Boolean
   },
 }
 </script>
+

@@ -1,13 +1,12 @@
 <template>
     <div
-        class="dark:bg-dark-mode h-full pb-32 dark:text-white overflow-x-hidden"
+        class="dark:bg-dark-mode h-full pb-24 dark:text-white overflow-x-hidden"
     >
         <div class="gradient-circle overflow-x-hidden"></div>
-        <div
-            class="customcc sm:block hidden md:block"
-            :class="isDark ? 'customcc-dark-theme' : 'customcc'"
-        ></div>
-
+      <div
+          class="customcc sm:block hidden md:block"
+          :class="isDark ? 'customcc-dark-theme' : 'customcc'"
+      ></div>
         <NavBar />
         <Hero :isDark="isDark" />
         <EducationView class="px-8" :isDark="isDark" />
